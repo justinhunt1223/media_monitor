@@ -30,7 +30,7 @@ This script will recursively scan the directories defined in `MEDIA_LOCATIONS` f
 **Notes**:
 - I recommend running this script initially with a directory containing only a few files to ensure everything runs for you. After you ensure it runs, I set it up as a cron job. The script utilizes a lock file to prevent multiple processes from running.
 - The table this script uses is created if not existing. Deleting the table will require rescanning of all files, which will take a while depending on your media library size. It only uses the `POSTGRES_DATABASE_TABLENAME`, so it can safely be used in a database containing other tables.
-- If you enable MQTT and use Home Assistant, disable logging for `sensor.media_monitor_count` unless you like an exessively bloated database. Everytime a file is processed, an update is sent over MQTT. You may also clear out `HOMEASSISTANT_DISCOVERY_TOPIC_COUNT` to not use publish to this entity.
+- If you enable MQTT and use Home Assistant, disable logging for `sensor.media_monitor_count` unless you like an exessively bloated database. Everytime a file is processed, an update is sent over MQTT. You may also clear out `HOMEASSISTANT_DISCOVERY_TOPIC_COUNT` to not publish to this entity.
 - Sample Home Assistant card:
 
 ```
