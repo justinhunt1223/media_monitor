@@ -1,7 +1,7 @@
 # Media Monitor
 
 
-This script will scan the directories defined in `MEDIA_LOCATIONS` for files with extentions in `MEDIA_EXTENSIONS`.
+This script will recursively scan the directories defined in `MEDIA_LOCATIONS` for files with extentions in `MEDIA_EXTENSIONS`.
 
 **No changes are ever made to media files, they are only ever read.**
 
