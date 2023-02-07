@@ -16,7 +16,7 @@ This script will recursively scan the directories defined in `MEDIA_LOCATIONS` f
            
 **Step 3**: Validate the files.
 - Files are processed in order their checksum from step 2 was generated, oldest to newest.
-- Using the command `MEDIA_VALIDATE_COMMAND`, test the file for validation. The default command decodes the file and any errors are output the the console. A valid file will have no console output, hence valid. This command, if changed, must return nothing to the console if the file is valid. Output is stripped to exclude whitespace and newlines.
+- Using the command `MEDIA_VALIDATE_COMMAND`, test the file for validation. The default command decodes the file and any errors are output to the console. A valid file will have no console output, hence valid. This command, if changed, must return nothing to the console if the file is valid. Output is stripped to exclude whitespace and newlines.
 - Checksums are calculated right before and after validation to ensure the file has not changed during validation as some videos can take a bit to check. Files will stay valid as long as the checksum does not change. Checksums are updated if the file is changed or after `MEDIA_UPDATE_CHECKSUM_AFTER_DAYS`.
 - If a file changes during validation, it will be re-checked the next time this is run.
           
